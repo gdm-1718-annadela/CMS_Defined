@@ -1,0 +1,22 @@
+.messages{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.messages div{
+    width: 42%;
+    margin: 20px 0.5%;
+    padding: 20px;
+    background: $white;
+    box-shadow: $boxShadow;
+    transition: 0.2s;
+}
+
+.messages div:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    box-shadow: $boxShadowHover;
+    transition: 0.2s;
+}
+

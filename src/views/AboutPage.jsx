@@ -31,10 +31,10 @@ return(
             <h1 className="fonttype">{aboutData.title}</h1>
             <p>{aboutData.synopsis}</p>
             <p>{aboutData.body}</p>
-        <button onClick={edit}>
+        <button className="btn-middle" onClick={edit}>
             Edit
         </button>
-        <Link to="/aboutpage/edit">Edit</Link>
+        {/* <Link to="/aboutpage/edit">Edit</Link> */}
      
         </div>
         </div>

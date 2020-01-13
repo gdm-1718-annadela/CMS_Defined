@@ -9,9 +9,6 @@ import {
   Link
 } from "react-router-dom";
 
-import "./../css/navigation.css";
-
-
 export default function Messages () {
     let projectData= [];
 
@@ -21,50 +18,52 @@ export default function Messages () {
 
         return (
             <div>
-                <h1>Messages</h1>
                 <ul>
-                {projectData.map(function(project, index){
+                    {projectData.map(function(project, index){
                         console.log(project[1])
                         let content = project[0]
                         // document.getElementById('projects').innerHTML += `<div><h2>${content.title}</h2><p>${content.synopsis}<p>${content.body}</p><button type="submit">edit</button></div>`
-                    let headdiv = document.getElementById('projects');
-                    let subdivs = document.createElement('div');
-                    headdiv.appendChild(subdivs);
+                        let headdiv = document.querySelector('.projects');
+                        let subdivs = document.createElement('div');
+                        subdivs.classList.add('project-container');
+                        headdiv.appendChild(subdivs);
 
-                    let title = document.createElement('h2')
-                    title.innerHTML = content.title;
-                    subdivs.appendChild(title);
+                        let title = document.createElement('h2')
+                        title.innerHTML = content.title;
+                        subdivs.appendChild(title);
 
-                    let synopsis = document.createElement('p')
-                    synopsis.innerHTML = content.synopsis;
-                    subdivs.appendChild(synopsis);
+                        // let synopsis = document.createElement('p')
+                        // synopsis.innerHTML = content.synopsis;
+                        // subdivs.appendChild(synopsis);
 
-                    let divTag = document.createElement('div');
-                    subdivs.appendChild(divTag)
+                        // let divTag = document.createElement('div');
+                        // subdivs.appendChild(divTag)
 
-                    let tags = content.tags;
-                    tags.map(function(tag, index){
-                        let aTag = document.createElement('p');
-                        aTag.innerHTML = tag;
-                        divTag.appendChild(aTag)
-                    })
+                        // let tags = content.tags;
+                        // tags.map(function(tag, index){
+                        //     let aTag = document.createElement('p');
+                        //     aTag.innerHTML = tag;
+                        //     divTag.appendChild(aTag)
+                        // })
 
-                    let images = content.images;
-                    images.map(function(image, index){
-                        let imagec = document.createElement('img');
-                        imagec.src = image;
-                        imagec.style.width="10%"
-                        subdivs.appendChild(imagec)
-                    })
+                        // let images = content.images;
+                        // let figure = document.createElement('figure');
+                        // images.map(function(image, index){
+                        //     let imagec = document.createElement('img');
+                        //     imagec.src = image;
+                        //     figure.appendChild(imagec);
+                        // })
+                        // subdivs.appendChild(figure);
 
-                    let button = document.createElement('a')
-                    button.href = `/project/${project[1]}`
-                    button.innerHTML = "edit"
-                    subdivs.appendChild(button)
-                
-                })}
-              </ul>
-            </div>
+                        let button = document.createElement('a')
+                        button.href = `/project/${project[1]}`
+                        button.innerHTML = "edit"
+                        button.classList.add('btn-middle')
+                        subdivs.appendChild(button)
+                    
+                    })}
+                    </ul>
+                </div>
         )
     }
 
@@ -89,9 +88,8 @@ export default function Messages () {
 
         return (
             <div>
-                <h1>Projects</h1>
-                <div id="projects"></div>
-                <a href="project/add">Add</a>
+                <div className="projects"></div>
+                <a className="btn-middle btn-fxd" href="project/add">Add</a>
             </div>
         )
   

@@ -1,0 +1,63 @@
+// OVERVIEW
+.projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.projects .project-container{
+    width: 44%;
+    margin: 20px 0.5%;
+    padding: 20px;
+    background: $white;
+    box-shadow: $boxShadow;
+    transition: 0.2s;
+    text-align: center;
+}
+
+.projects .project-container:hover{
+    transform: scale(1.1);
+    box-shadow: $boxShadowHover;
+    transition: 0.2s;
+}
+
+.projects .project-container h2{
+    margin-bottom: 20px;
+}
+
+.projects .project-container figure{
+    margin: 20px 0;
+}
+
+.projects .project-container img{
+    width: 25%;
+}
+
+// EDIT
+.project-edit-container{
+    width: 50%;
+    padding: 70px 0;
+    margin: 0 auto;
+}
+
+#images{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%; 
+    margin-top: 20px;
+}
+
+#images div{
+    width: 30%;
+}
+
+#images div img{
+    width: 100%;
+}

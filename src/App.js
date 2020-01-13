@@ -6,10 +6,7 @@ import Messages from './views/Messages.jsx';
 import Project from './views/Project.jsx';
 import OneProject from './views/OneProject';
 
-import "./css/navigation.css";
-import "./css/home.css";
-import "./css/messages.css";
-import "./css/about.css";
+import "./style/general.scss";
 
 import {
   BrowserRouter as Router,
@@ -24,12 +21,12 @@ function App() {
       <div>
         <div className="navigation">
           <a href="/">Home</a>
-          <a href="/messages">messages</a>
+          <a href="/messages">Messages</a>
           <div className="dropdown">
-          <a className="pagemenu" id="pagemenu" href="/">pages</a>
+          <a className="pagemenu" id="pagemenu" href="#">Edit</a>
           <div className="dropdown-content">
-            <a href="/aboutpage">about page</a>
-            <a href="/project">Project page</a>
+            <a href="/aboutpage">About Page</a>
+            <a href="/project">Project Page</a>
           </div>
           </div>
         </div>

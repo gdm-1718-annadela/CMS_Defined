@@ -12,7 +12,7 @@ export default function Home () {
     <div className="homepage">
       <div className="left"><div className="frontimage"></div></div>
       <div className="right">
-        <h1 className="frontTitle fonttype">Welkom Admin</h1>
+        <h1 className="frontTitle fonttype">Welcome!</h1>
       </div>
     </div>
   )

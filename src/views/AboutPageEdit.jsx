@@ -43,11 +43,13 @@ export default function AboutPageEdit () {
 return(
     <div>
         <div className="right"><h1>Edit</h1></div>
-        <div className="left">
-        <input type="text" name="title" defaultValue={aboutData.title} onChange={(e)=>{setTitle(e.target.value)}}/>
-        <input type="text" name="synopsis" defaultValue={aboutData.synopsis} onChange={(e)=>{setSynopsis(e.target.value)}}/>
-        <input type="textarea" name="body" defaultValue={aboutData.body} onChange={(e)=>{setBody(e.target.value)}}/>
-        <button type="submit" onClick={Edit}>Edit</button>
+        <div className="left about form">
+            <div>
+                <input type="text" name="title" defaultValue={aboutData.title} onChange={(e)=>{setTitle(e.target.value)}}/>
+                <input type="text" name="synopsis" defaultValue={aboutData.synopsis} onChange={(e)=>{setSynopsis(e.target.value)}}/>
+                <textarea name="body" defaultValue={aboutData.body} onChange={(e)=>{setBody(e.target.value)}}></textarea>
+                <button type="submit" className="btn-middle" onClick={Edit}>Edit</button>
+            </div>
         </div>
     </div>
 

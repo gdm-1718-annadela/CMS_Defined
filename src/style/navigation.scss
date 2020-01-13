@@ -1,0 +1,54 @@
+.navigation{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    position: absolute;
+    z-index: 10;
+    width: 100vw;
+    background-color: $white;
+    box-shadow: $boxShadowHover;
+    z-index: 11;
+}
+
+.navigation a{
+    text-decoration: none;
+    color: $black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    transition: 0.2s;
+    font-family: $nav-font;
+    text-transform: lowercase;
+}
+
+.navigation a:hover{
+    color: $orange;
+    transition: 0.2s;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: $white;
+    min-width: 160px;
+    // box-shadow: $boxShadowHover;
+    text-align: center;
+    left: -47px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    display: block;
+    margin: 20px 0;
+}
+
+.dropdown-content a:hover {
+    display: block;
+}
