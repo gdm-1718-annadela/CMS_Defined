@@ -22,7 +22,6 @@ export default function Messages () {
                     {projectData.map(function(project, index){
                         console.log(project[1])
                         let content = project[0]
-                        // document.getElementById('projects').innerHTML += `<div><h2>${content.title}</h2><p>${content.synopsis}<p>${content.body}</p><button type="submit">edit</button></div>`
                         let headdiv = document.querySelector('.projects');
                         let subdivs = document.createElement('div');
                         subdivs.classList.add('project-container');
@@ -32,34 +31,17 @@ export default function Messages () {
                         title.innerHTML = content.title;
                         subdivs.appendChild(title);
 
-                        // let synopsis = document.createElement('p')
-                        // synopsis.innerHTML = content.synopsis;
-                        // subdivs.appendChild(synopsis);
-
-                        // let divTag = document.createElement('div');
-                        // subdivs.appendChild(divTag)
-
-                        // let tags = content.tags;
-                        // tags.map(function(tag, index){
-                        //     let aTag = document.createElement('p');
-                        //     aTag.innerHTML = tag;
-                        //     divTag.appendChild(aTag)
-                        // })
-
-                        // let images = content.images;
-                        // let figure = document.createElement('figure');
-                        // images.map(function(image, index){
-                        //     let imagec = document.createElement('img');
-                        //     imagec.src = image;
-                        //     figure.appendChild(imagec);
-                        // })
-                        // subdivs.appendChild(figure);
-
                         let button = document.createElement('a')
-                        button.href = `/project/${project[1]}`
+                        button.href = `/project/edit/${project[1]}`
                         button.innerHTML = "edit"
                         button.classList.add('btn-middle')
                         subdivs.appendChild(button)
+
+                        let btndelete = document.createElement('a');
+                        btndelete.href = `/project/delete/${project[1]}`
+                        btndelete.innerHTML = "delete"
+                        btndelete.classList.add('btn-middle', 'btn-red')
+                        subdivs.appendChild(btndelete)
                     
                     })}
                     </ul>
@@ -78,10 +60,6 @@ export default function Messages () {
             showMessages()
             
         });
-    }
-
-    function addProject(){
-
     }
     useEffect(collection,[])
 

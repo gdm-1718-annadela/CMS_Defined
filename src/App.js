@@ -5,6 +5,8 @@ import AboutPageEdit from './views/AboutPageEdit.jsx';
 import Messages from './views/Messages.jsx';
 import Project from './views/Project.jsx';
 import OneProject from './views/OneProject';
+import AddProject from './views/AddProject';
+import DeleteProject from './views/DeleteProject';
 
 import "./style/general.scss";
 
@@ -39,7 +41,9 @@ function App() {
       <Route path="/aboutpage/edit" component={AboutPageEdit} exact/>
       <Route path="/messages" component={Messages} exact/>
       <Route path="/project" component={Project} exact/>
-      <Route path="/project/:id" component={OneProject} exact/>
+      <Route path="/project/edit/:id" component={OneProject} exact/>
+      <Route path="/project/add" component={AddProject} exact/>
+      <Route path="/project/delete/:id" component={DeleteProject} exact/>
     </div>
     </Router>
 

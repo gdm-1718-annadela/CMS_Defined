@@ -15,7 +15,7 @@ export default function Messages () {
     function showMessages(){
         console.log(messageData[0].email)
             messageData.map(function(message, index){
-                    document.getElementById('messages').innerHTML += `<div><h2>${message.name}</h2><p>${message.message}</p><p><span>${message.email}</span></p></div>`
+                    document.getElementById('messages').innerHTML += `<div><h2>${message.name}</h2><p>${message.message}</p><a href="mailto:${message.email}"><span>${message.email}</span></p></div>`
             })
         }
 
